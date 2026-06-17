@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Settings;
+namespace Shadowdactyl\Http\Requests\Api\Client\Servers\Settings;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Shadowdactyl\Models\Permission;
+use Shadowdactyl\Http\Requests\Api\Client\ClientApiRequest;
 
 class ReinstallServerRequest extends ClientApiRequest
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Allocation;
+namespace Shadowdactyl\Exceptions\Service\Allocation;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Shadowdactyl\Exceptions\DisplayException;
 
 class NoAutoAllocationSpaceAvailableException extends DisplayException
 {

@@ -1,20 +1,20 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin\Servers;
+namespace Shadowdactyl\Http\Controllers\Admin\Servers;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Nest;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Services\Servers\EnvironmentService;
-use Pterodactyl\Repositories\Eloquent\NestRepository;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\MountRepository;
-use Pterodactyl\Traits\Controllers\JavascriptInjection;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
+use Shadowdactyl\Models\Nest;
+use Shadowdactyl\Models\Server;
+use Shadowdactyl\Exceptions\DisplayException;
+use Shadowdactyl\Http\Controllers\Controller;
+use Shadowdactyl\Services\Servers\EnvironmentService;
+use Shadowdactyl\Repositories\Eloquent\NestRepository;
+use Shadowdactyl\Repositories\Eloquent\NodeRepository;
+use Shadowdactyl\Repositories\Eloquent\MountRepository;
+use Shadowdactyl\Traits\Controllers\JavascriptInjection;
+use Shadowdactyl\Repositories\Eloquent\LocationRepository;
+use Shadowdactyl\Repositories\Eloquent\DatabaseHostRepository;
 
 class ServerViewController extends Controller
 {
@@ -66,7 +66,7 @@ class ServerViewController extends Controller
     /**
      * Returns the server startup management page.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Shadowdactyl\Exceptions\Repository\RecordNotFoundException
      */
     public function startup(Request $request, Server $server): View
     {

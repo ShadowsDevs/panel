@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Repository;
+namespace Shadowdactyl\Exceptions\Repository;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Shadowdactyl\Exceptions\DisplayException;
 
 class DuplicateDatabaseNameException extends DisplayException
 {

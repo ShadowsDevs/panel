@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Server;
+namespace Shadowdactyl\Events\Server;
 
-use Pterodactyl\Events\Event;
-use Pterodactyl\Models\Server;
+use Shadowdactyl\Events\Event;
+use Shadowdactyl\Models\Server;
 use Illuminate\Queue\SerializesModels;
 
 class Created extends Event

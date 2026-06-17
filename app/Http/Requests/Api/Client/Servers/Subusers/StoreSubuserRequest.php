@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Subusers;
+namespace Shadowdactyl\Http\Requests\Api\Client\Servers\Subusers;
 
-use Pterodactyl\Models\Permission;
+use Shadowdactyl\Models\Permission;
 
 class StoreSubuserRequest extends SubuserRequest
 {

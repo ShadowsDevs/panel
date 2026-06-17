@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Files;
+namespace Shadowdactyl\Http\Requests\Api\Client\Servers\Files;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Contracts\Http\ClientPermissionsRequest;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Shadowdactyl\Models\Permission;
+use Shadowdactyl\Contracts\Http\ClientPermissionsRequest;
+use Shadowdactyl\Http\Requests\Api\Client\ClientApiRequest;
 
 class GetFileContentsRequest extends ClientApiRequest implements ClientPermissionsRequest
 {

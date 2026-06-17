@@ -1,20 +1,20 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Nodes;
+namespace Shadowdactyl\Http\Controllers\Api\Application\Nodes;
 
-use Pterodactyl\Models\Node;
+use Shadowdactyl\Models\Node;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Models\Allocation;
+use Shadowdactyl\Models\Allocation;
 use Spatie\QueryBuilder\QueryBuilder;
 use Spatie\QueryBuilder\AllowedFilter;
 use Illuminate\Database\Eloquent\Builder;
-use Pterodactyl\Services\Allocations\AssignmentService;
-use Pterodactyl\Services\Allocations\AllocationDeletionService;
-use Pterodactyl\Transformers\Api\Application\AllocationTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Allocations\GetAllocationsRequest;
-use Pterodactyl\Http\Requests\Api\Application\Allocations\StoreAllocationRequest;
-use Pterodactyl\Http\Requests\Api\Application\Allocations\DeleteAllocationRequest;
+use Shadowdactyl\Services\Allocations\AssignmentService;
+use Shadowdactyl\Services\Allocations\AllocationDeletionService;
+use Shadowdactyl\Transformers\Api\Application\AllocationTransformer;
+use Shadowdactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Shadowdactyl\Http\Requests\Api\Application\Allocations\GetAllocationsRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Allocations\StoreAllocationRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Allocations\DeleteAllocationRequest;
 
 class AllocationController extends ApplicationApiController
 {
@@ -56,11 +56,11 @@ class AllocationController extends ApplicationApiController
     /**
      * Store new allocations for a given node.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
+     * @throws \Shadowdactyl\Exceptions\DisplayException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\InvalidPortMappingException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\PortOutOfRangeException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
      */
     public function store(StoreAllocationRequest $request, Node $node): JsonResponse
     {
@@ -72,7 +72,7 @@ class AllocationController extends ApplicationApiController
     /**
      * Delete a specific allocation from the Panel.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
      */
     public function delete(DeleteAllocationRequest $request, Node $node, Allocation $allocation): JsonResponse
     {

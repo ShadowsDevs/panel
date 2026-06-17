@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Http\Controllers\Admin\UserController;
+namespace Shadowdactyl\Tests\Integration\Http\Controllers\Admin\UserController;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Tests\Integration\Http\HttpTestCase;
+use Shadowdactyl\Models\User;
+use Shadowdactyl\Tests\Integration\Http\HttpTestCase;
 
 class DeleteUserTest extends HttpTestCase
 {

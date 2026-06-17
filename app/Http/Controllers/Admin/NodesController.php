@@ -1,30 +1,30 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Shadowdactyl\Http\Controllers\Admin;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Node;
+use Shadowdactyl\Models\Node;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Allocation;
+use Shadowdactyl\Models\Allocation;
 use Illuminate\Http\RedirectResponse;
 use Prologue\Alerts\AlertsMessageBag;
 use Illuminate\View\Factory as ViewFactory;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Services\Nodes\NodeUpdateService;
+use Shadowdactyl\Http\Controllers\Controller;
+use Shadowdactyl\Services\Nodes\NodeUpdateService;
 use Illuminate\Cache\Repository as CacheRepository;
-use Pterodactyl\Services\Nodes\NodeCreationService;
-use Pterodactyl\Services\Nodes\NodeDeletionService;
-use Pterodactyl\Services\Allocations\AssignmentService;
-use Pterodactyl\Services\Helpers\SoftwareVersionService;
-use Pterodactyl\Http\Requests\Admin\Node\NodeFormRequest;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
-use Pterodactyl\Http\Requests\Admin\Node\AllocationFormRequest;
-use Pterodactyl\Services\Allocations\AllocationDeletionService;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Http\Requests\Admin\Node\AllocationAliasFormRequest;
+use Shadowdactyl\Services\Nodes\NodeCreationService;
+use Shadowdactyl\Services\Nodes\NodeDeletionService;
+use Shadowdactyl\Services\Allocations\AssignmentService;
+use Shadowdactyl\Services\Helpers\SoftwareVersionService;
+use Shadowdactyl\Http\Requests\Admin\Node\NodeFormRequest;
+use Shadowdactyl\Contracts\Repository\NodeRepositoryInterface;
+use Shadowdactyl\Contracts\Repository\ServerRepositoryInterface;
+use Shadowdactyl\Http\Requests\Admin\Node\AllocationFormRequest;
+use Shadowdactyl\Services\Allocations\AllocationDeletionService;
+use Shadowdactyl\Contracts\Repository\LocationRepositoryInterface;
+use Shadowdactyl\Contracts\Repository\AllocationRepositoryInterface;
+use Shadowdactyl\Http\Requests\Admin\Node\AllocationAliasFormRequest;
 
 class NodesController extends Controller
 {
@@ -66,7 +66,7 @@ class NodesController extends Controller
     /**
      * Post controller to create a new node on the system.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
      */
     public function store(NodeFormRequest $request): RedirectResponse
     {
@@ -79,9 +79,9 @@ class NodesController extends Controller
     /**
      * Updates settings for a node.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Shadowdactyl\Exceptions\DisplayException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Repository\RecordNotFoundException
      */
     public function updateSettings(NodeFormRequest $request, Node $node): RedirectResponse
     {
@@ -94,7 +94,7 @@ class NodesController extends Controller
     /**
      * Removes a single allocation from a node.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
      */
     public function allocationRemoveSingle(int $node, Allocation $allocation): Response
     {
@@ -106,7 +106,7 @@ class NodesController extends Controller
     /**
      * Removes multiple individual allocations from a node.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\ServerUsingAllocationException
      */
     public function allocationRemoveMultiple(Request $request, int $node): Response
     {
@@ -140,8 +140,8 @@ class NodesController extends Controller
     /**
      * Sets an alias for a specific allocation on a node.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Repository\RecordNotFoundException
      */
     public function allocationSetAlias(AllocationAliasFormRequest $request): \Symfony\Component\HttpFoundation\Response
     {
@@ -155,10 +155,10 @@ class NodesController extends Controller
     /**
      * Creates new allocations on a node.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\InvalidPortMappingException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\PortOutOfRangeException
+     * @throws \Shadowdactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
      */
     public function createAllocation(AllocationFormRequest $request, Node $node): RedirectResponse
     {
@@ -171,7 +171,7 @@ class NodesController extends Controller
     /**
      * Deletes a node from the system.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Shadowdactyl\Exceptions\DisplayException
      */
     public function delete(int|Node $node): RedirectResponse
     {

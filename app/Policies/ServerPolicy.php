@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Policies;
+namespace Shadowdactyl\Policies;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Server;
+use Shadowdactyl\Models\User;
+use Shadowdactyl\Models\Server;
 
 class ServerPolicy
 {

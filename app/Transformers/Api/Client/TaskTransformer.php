@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Shadowdactyl\Transformers\Api\Client;
 
-use Pterodactyl\Models\Task;
+use Shadowdactyl\Models\Task;
 
 class TaskTransformer extends BaseClientTransformer
 {

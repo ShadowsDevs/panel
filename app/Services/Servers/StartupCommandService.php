@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Shadowdactyl\Services\Servers;
 
-use Pterodactyl\Models\Server;
+use Shadowdactyl\Models\Server;
 
 class StartupCommandService
 {

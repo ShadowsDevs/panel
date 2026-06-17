@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Database;
+namespace Shadowdactyl\Tests\Integration\Api\Client\Server\Database;
 
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\DatabaseHost;
-use Pterodactyl\Contracts\Extensions\HashidsInterface;
-use Pterodactyl\Services\Databases\DatabasePasswordService;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Shadowdactyl\Models\Subuser;
+use Shadowdactyl\Models\Database;
+use Shadowdactyl\Models\DatabaseHost;
+use Shadowdactyl\Contracts\Extensions\HashidsInterface;
+use Shadowdactyl\Services\Databases\DatabasePasswordService;
+use Shadowdactyl\Services\Databases\DatabaseManagementService;
+use Shadowdactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class DatabaseAuthorizationTest extends ClientApiIntegrationTestCase
 {

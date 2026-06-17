@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Contracts\Models;
+namespace Shadowdactyl\Contracts\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 

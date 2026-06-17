@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client;
+namespace Shadowdactyl\Tests\Integration\Api\Client;
 
 use Illuminate\Support\Str;
-use Pterodactyl\Models\User;
+use Shadowdactyl\Models\User;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Subuser;
+use Shadowdactyl\Models\Subuser;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Hash;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
+use Shadowdactyl\Jobs\RevokeSftpAccessJob;
 
 class AccountControllerTest extends ClientApiIntegrationTestCase
 {

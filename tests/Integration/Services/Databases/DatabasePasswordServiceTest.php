@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Databases;
+namespace Shadowdactyl\Tests\Integration\Services\Databases;
 
 use Mockery\MockInterface;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\DatabaseHost;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Repositories\Eloquent\DatabaseRepository;
-use Pterodactyl\Services\Databases\DatabasePasswordService;
+use Shadowdactyl\Models\Database;
+use Shadowdactyl\Models\DatabaseHost;
+use Shadowdactyl\Tests\Integration\IntegrationTestCase;
+use Shadowdactyl\Repositories\Eloquent\DatabaseRepository;
+use Shadowdactyl\Services\Databases\DatabasePasswordService;
 
 class DatabasePasswordServiceTest extends IntegrationTestCase
 {

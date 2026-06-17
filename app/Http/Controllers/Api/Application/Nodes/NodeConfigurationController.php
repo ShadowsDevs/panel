@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Nodes;
+namespace Shadowdactyl\Http\Controllers\Api\Application\Nodes;
 
-use Pterodactyl\Models\Node;
+use Shadowdactyl\Models\Node;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Nodes\GetNodeConfigurationRequest;
+use Shadowdactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Shadowdactyl\Http\Requests\Api\Application\Nodes\GetNodeConfigurationRequest;
 
 class NodeConfigurationController extends ApplicationApiController
 {

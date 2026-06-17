@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Subuser;
+namespace Shadowdactyl\Tests\Integration\Api\Client\Server\Subuser;
 
 use Ramsey\Uuid\Uuid;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Permission;
+use Shadowdactyl\Models\User;
+use Shadowdactyl\Models\Subuser;
+use Shadowdactyl\Models\Permission;
 use Illuminate\Support\Facades\Bus;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
+use Shadowdactyl\Jobs\RevokeSftpAccessJob;
 use PHPUnit\Framework\Attributes\TestWith;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Shadowdactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class DeleteSubuserTest extends ClientApiIntegrationTestCase
 {
@@ -22,7 +22,7 @@ class DeleteSubuserTest extends ClientApiIntegrationTestCase
      * it to an integer. Then, in the deep API middlewares you would end up trying to load a user
      * with an ID of 12, which may or may not exist and be wrongly assigned to the model object.
      *
-     * @see https://github.com/pterodactyl/panel/issues/2359
+     * @see https://github.com/ShadowsDevs/panel/issues/2359
      */
     #[TestWith([null])]
     #[TestWith(['18180000'])]

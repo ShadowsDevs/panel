@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Shadowdactyl\Transformers\Api\Client;
 
-use Pterodactyl\Models\Backup;
+use Shadowdactyl\Models\Backup;
 
 class BackupTransformer extends BaseClientTransformer
 {

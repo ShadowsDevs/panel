@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Nodes;
+namespace Shadowdactyl\Http\Requests\Api\Application\Nodes;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
+use Shadowdactyl\Services\Acl\Api\AdminAcl;
 
 class GetNodeConfigurationRequest extends GetNodesRequest
 {

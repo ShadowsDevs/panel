@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Http\Controllers\Auth;
+namespace Shadowdactyl\Tests\Integration\Http\Controllers\Auth;
 
 use Carbon\Carbon;
-use Pterodactyl\Models\User;
+use Shadowdactyl\Models\User;
 use PragmaRX\Google2FA\Google2FA;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Session;
-use Pterodactyl\Events\Auth\DirectLogin;
+use Shadowdactyl\Events\Auth\DirectLogin;
 use PHPUnit\Framework\Attributes\TestWith;
-use Pterodactyl\Tests\Integration\Http\HttpTestCase;
-use Pterodactyl\Events\Auth\ProvidedAuthenticationToken;
+use Shadowdactyl\Tests\Integration\Http\HttpTestCase;
+use Shadowdactyl\Events\Auth\ProvidedAuthenticationToken;
 
 class LoginCheckpointControllerTest extends HttpTestCase
 {
@@ -69,7 +69,7 @@ class LoginCheckpointControllerTest extends HttpTestCase
      * logic fails if the token's timestamp is before the `totp_authenticated_at`
      * column value.
      *
-     * @see https://github.com/pterodactyl/panel/security/advisories/GHSA-rgmp-4873-r683
+     * @see https://github.com/ShadowsDevs/panel/security/advisories/GHSA-rgmp-4873-r683
      */
     #[TestWith([1])]
     #[TestWith([30])]

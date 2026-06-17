@@ -1,18 +1,18 @@
 <?php
 
-namespace Pterodactyl\Services\Nodes;
+namespace Shadowdactyl\Services\Nodes;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Str;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
+use Shadowdactyl\Models\Node;
+use Shadowdactyl\Models\User;
 use Webmozart\Assert\Assert;
-use Pterodactyl\Enum\JwtScope;
+use Shadowdactyl\Enum\JwtScope;
 use Lcobucci\JWT\Configuration;
 use Lcobucci\JWT\UnencryptedToken;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Signer\Key\InMemory;
-use Pterodactyl\Extensions\Lcobucci\JWT\Encoding\TimestampDates;
+use Shadowdactyl\Extensions\Lcobucci\JWT\Encoding\TimestampDates;
 
 class NodeJWTService
 {

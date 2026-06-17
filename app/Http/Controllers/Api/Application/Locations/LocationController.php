@@ -1,21 +1,21 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Locations;
+namespace Shadowdactyl\Http\Controllers\Api\Application\Locations;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Location;
+use Shadowdactyl\Models\Location;
 use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Services\Locations\LocationUpdateService;
-use Pterodactyl\Services\Locations\LocationCreationService;
-use Pterodactyl\Services\Locations\LocationDeletionService;
-use Pterodactyl\Transformers\Api\Application\LocationTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Locations\GetLocationRequest;
-use Pterodactyl\Http\Requests\Api\Application\Locations\GetLocationsRequest;
-use Pterodactyl\Http\Requests\Api\Application\Locations\StoreLocationRequest;
-use Pterodactyl\Http\Requests\Api\Application\Locations\DeleteLocationRequest;
-use Pterodactyl\Http\Requests\Api\Application\Locations\UpdateLocationRequest;
+use Shadowdactyl\Services\Locations\LocationUpdateService;
+use Shadowdactyl\Services\Locations\LocationCreationService;
+use Shadowdactyl\Services\Locations\LocationDeletionService;
+use Shadowdactyl\Transformers\Api\Application\LocationTransformer;
+use Shadowdactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Shadowdactyl\Http\Requests\Api\Application\Locations\GetLocationRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Locations\GetLocationsRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Locations\StoreLocationRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Locations\DeleteLocationRequest;
+use Shadowdactyl\Http\Requests\Api\Application\Locations\UpdateLocationRequest;
 
 class LocationController extends ApplicationApiController
 {
@@ -59,7 +59,7 @@ class LocationController extends ApplicationApiController
      * Store a new location on the Panel and return an HTTP/201 response code with the
      * new location attached.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
      */
     public function store(StoreLocationRequest $request): JsonResponse
     {
@@ -78,8 +78,8 @@ class LocationController extends ApplicationApiController
     /**
      * Update a location on the Panel and return the updated record to the user.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateLocationRequest $request, Location $location): array
     {
@@ -93,7 +93,7 @@ class LocationController extends ApplicationApiController
     /**
      * Delete a location from the Panel.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Location\HasActiveNodesException
+     * @throws \Shadowdactyl\Exceptions\Service\Location\HasActiveNodesException
      */
     public function delete(DeleteLocationRequest $request, Location $location): Response
     {

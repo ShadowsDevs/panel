@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Eggs\Variables;
+namespace Shadowdactyl\Services\Eggs\Variables;
 
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Traits\Services\ValidatesValidationRules;
+use Shadowdactyl\Models\EggVariable;
+use Shadowdactyl\Traits\Services\ValidatesValidationRules;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
-use Pterodactyl\Contracts\Repository\EggVariableRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
+use Shadowdactyl\Contracts\Repository\EggVariableRepositoryInterface;
+use Shadowdactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
 
 class VariableCreationService
 {
@@ -31,8 +31,8 @@ class VariableCreationService
     /**
      * Create a new variable for a given Egg.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Service\Egg\Variable\BadValidationRuleException
+     * @throws \Shadowdactyl\Exceptions\Model\DataValidationException
+     * @throws \Shadowdactyl\Exceptions\Service\Egg\Variable\BadValidationRuleException
      * @throws ReservedVariableNameException
      */
     public function handle(int $egg, array $data): EggVariable

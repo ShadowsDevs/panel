@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Shadowdactyl\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * \Pterodactyl\Models\ActivityLogSubject.
+ * \Shadowdactyl\Models\ActivityLogSubject.
  *
  * @property int $id
  * @property int $activity_log_id
@@ -32,7 +32,7 @@ class ActivityLogSubject extends Pivot
     protected $guarded = ['id'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Pterodactyl\Models\ActivityLog, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Shadowdactyl\Models\ActivityLog, $this>
      */
     public function activityLog(): BelongsTo
     {

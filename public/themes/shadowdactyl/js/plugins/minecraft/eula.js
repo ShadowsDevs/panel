@@ -38,8 +38,8 @@ $(document).ready(function () {
             }, function () {
                 $.ajax({
                     type: 'POST',
-                    url: Pterodactyl.meta.saveFile,
-                    headers: { 'X-CSRF-Token': Pterodactyl.meta.csrfToken, },
+                    url: Shadowdactyl.meta.saveFile,
+                    headers: { 'X-CSRF-Token': Shadowdactyl.meta.csrfToken, },
                     data: {
                         file: 'eula.txt',
                         contents: 'eula=true'

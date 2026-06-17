@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Traits\Integration;
+namespace Shadowdactyl\Tests\Traits\Integration;
 
 use Ramsey\Uuid\Uuid;
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Allocation;
+use Shadowdactyl\Models\Egg;
+use Shadowdactyl\Models\Node;
+use Shadowdactyl\Models\User;
+use Shadowdactyl\Models\Server;
+use Shadowdactyl\Models\Subuser;
+use Shadowdactyl\Models\Location;
+use Shadowdactyl\Models\Allocation;
 
 trait CreatesTestModels
 {
@@ -81,7 +81,7 @@ trait CreatesTestModels
      *
      * @param string[] $permissions
      *
-     * @return array{\Pterodactyl\Models\User, \Pterodactyl\Models\Server}
+     * @return array{\Shadowdactyl\Models\User, \Shadowdactyl\Models\Server}
      */
     public function generateTestAccount(array $permissions = []): array
     {
@@ -130,7 +130,7 @@ trait CreatesTestModels
     private function getBungeecordEgg(): Egg
     {
         /** @var Egg $egg */
-        $egg = Egg::query()->where('author', 'support@pterodactyl.io')->where('name', 'Bungeecord')->firstOrFail();
+        $egg = Egg::query()->where('author', 'support@shadowdactyl.io')->where('name', 'Bungeecord')->firstOrFail();
 
         return $egg;
     }
