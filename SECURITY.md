@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Pterodactyl only provides security support for the latest `major.minor` versions of the Panel and Wings software.
+ShadowsDevs only provides security support for the latest `major.minor` versions of the Panel and Wings software.
 If a security vulnerability is found in an older version but cannot be reproduced on a supported version it will
 not be considered. Additionally, security issues found in unreleased code will be addressed, but do not warrant a
 security advisory.
